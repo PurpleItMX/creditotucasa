@@ -91,25 +91,25 @@
     <div class="wrapper">
         @if(Auth::user())
         <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
-            <!-- Left navbar links -->
-            <div class="col-lg-1 col-xl-1">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
-                </li>
-              </ul>
-            </div>
-            <!-- Right navbar links -->
-            <div class="col-lg-1 col-lx-1 offset-lg-10 offset-xl-10">
-                <a class="" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                  <div class="button-logout">
-                   <p>{{ __('Salir') }}</p>
-                  </div>
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-            </div>
+          <!-- Left navbar links -->
+          <div class="col-lg-1 col-xl-1">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+              </li>
+            </ul>
+          </div>
+          <!-- Right navbar links -->
+          <div class="col-lg-1 col-lx-1 offset-lg-9 offset-xl-9">
+              <a class="" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <div class="button-logout">
+                 <p>{{ __('Salir') }}</p>
+                </div>
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
+          </div>
         </nav>
         @endif
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
