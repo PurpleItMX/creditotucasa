@@ -53,7 +53,35 @@
 </head>
 <body class="hold-transition sidebar-mini">
     @guest
+    <div class="">
+    <section class="">
+      <div class="">
+        <main class="">
+            @if(!empty($success))
+                <input id="message" value="{{ $success }}" type="hidden"/>
+                <div class="alert alert-success">
+                    <p>{{ $success }}</p>
+                    <!--<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>-->
+                </div>
+            @endif
+            @if($errors->any())
+                <input id="message" value="{{ $errors->first()}}" type="hidden"/>
+                <div class="alert alert-danger">
+                    <p>{{ $errors->first()}}</p>
+                    <!--<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>-->
+                </div>
+            @endif
 
+            <div id="messageAlert"><p></p></div>
+            @yield('content')
+        </main>
+      </div>
+    </section>
+</div>
         <!--<script type="text/javascript">
             window.location = "{{ route('login') }}";
 
