@@ -1,0 +1,14 @@
+php artisan make:model nombredelatabla -mf crea el modelo con tabla bean y factory
+
+php artisan make:seed  ejecuta los seed
+
+php artisan migrate:refresh hace rollback y crea las tablas
+
+php artisan make:seeder nombredelatablaseeder
+
+php artisan make:Controller nameController
+
+
+para query cuando busque que no se ha null 
+->orWhereNull('campo')
+->where('campo','!=',value)

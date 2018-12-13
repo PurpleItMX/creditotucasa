@@ -1,0 +1,1752 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+/* Fuentes */
+@font-face {
+  font-family: 'Muli-Bold';
+  src: url(../font/Muli-Bold.ttf);
+}
+@font-face {
+  font-family: 'Muli-SemiBold';
+  src: url(../font/Muli-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'Muli-Regular';
+  src: url(../font/Muli-Regular.ttf);
+}
+@font-face {
+  font-family: 'Muli-ExtraLight.ttf';
+  src: url(../font/Muli-ExtraLight.ttf);
+}
+@font-face {
+  font-family: 'Muli-Regular';
+  src: url(../font/Muli-Regular.ttf);
+}
+/* Variables */
+:root{
+  --azul: #0d2b6e;
+  --gris: #5d5d5d;
+/* Fuentes */
+  --muliBold: "Muli-Bold";
+  --muliSemi: "Muli-SemiBold";
+  --muliRegular: "Muli-Regular";
+  --muliLight: "Muli-ExtraLight.ttf";
+}
+select{
+  border-radius: none;
+  border-radius: 0px;
+  -webkit-appearance: none;
+}
+.title{
+  font-size: 4rem;
+}
+.size-big{
+  font-size: 3.2rem;
+  color: var(--azul);
+}
+.titulo{
+  font-family: var(--muliRegular);
+}
+.color-azul{
+  color: var(--azul);
+}
+.color--gris{
+  background-color: var(--gris);
+}
+.color--azul{
+  background-color: var(--azul);
+}
+.center-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.espaciador{
+  height: 60px;
+}
+@media (min-width: 1024px) and (max-width: 1335px)  {
+  .icon_logo_menu{
+    width: 100px;
+    height: 100px;
+    background-image: url(../assets/webcreditodecasa-23.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .bg_start{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/transparencias_creditodecasa-19.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+  .bg_end{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/transparencias_creditodecasa-44.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+  .cont_nav-toggle{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .line{
+    width: 2px;
+    height: 70vh;
+    background-color: #fff;
+  }
+  .nav_main a li{
+    list-style: none;
+    color: #fff;
+    font-family: var(--muliRegular);
+  }
+  .secc_02_vivienda{
+    width: 100%;
+    height: 500px;
+    background-image: url(../assets/webcreditodecasa-33.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+  }
+  .corte_llave{
+    width: 100%;
+    height: 275px;
+    margin-top: 10px;
+    margin-left: 55px;
+    position: absolute;
+    background-image: url(../assets/llavecreditodecasa-02-01.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: -80px;
+  }
+}
+
+@media (min-width: 1335px) and (max-width: 1439px)  {
+  .icon_logo_menu{
+    width: 100px;
+    height: 100px;
+    background-image: url(../assets/webcreditodecasa-23.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .bg_start{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/transparencias_creditodecasa-19.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .bg_end{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/transparencias_creditodecasa-44.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+  .cont_nav-toggle{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .line{
+    width: 2px;
+    height: 70vh;
+    background-color: #fff;
+  }
+  .nav_main a li{
+    list-style: none;
+    color: #fff;
+    font-family: var(--muliRegular);
+  }
+  .nav_main a li:hover{
+    background-color: var(--azul);
+  }
+  .nav_main a:hover{
+    text-decoration: none;
+  }
+  .view-menu{
+    margin-right: 0px;
+    transition: all 1s ease;
+  }
+  .hide-menu{
+    margin-right: -40%;
+    transition: all 1s ease;
+  }
+  .secc_02_vivienda{
+    width: 100%;
+    height: 500px;
+    background-image: url(../assets/webcreditodecasa-33.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+  }
+}
+@media (min-width: 1440px) {
+  .icon_logo_menu{
+    width:   60px;
+    height: 150px;
+    background-image: url(../assets/webcreditodecasa-02.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .bg_start{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/transparencias_creditodecasa-19.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .bg_end{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/transparencias_creditodecasa-44.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+  .cont_nav-toggle{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .line{
+    width: 1px;
+    height: 60vh;
+    background-color: #fff;
+  }
+  .nav_main a li{
+    padding-left:  10px;
+    padding-right: 10px;
+    list-style: none;
+    color: #fff;
+    font-family: var(--muliLight);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .nav_main a li:hover{
+    background-color: var(--azul);
+  }
+  .nav_main a:hover{
+    text-decoration: none;
+  }
+  .view-menu{
+    margin-right: 0px;
+    transition: all 1s ease;
+  }
+  .hide-menu{
+    margin-right: -40%;
+    transition: all 1s ease;
+  }
+  .secc_02_vivienda{
+    width: 100%;
+    height: 600px;
+    background-image: url(../assets/webcreditodecasa-33.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 40%;
+  }
+  .text_vivienda{
+    margin-top: 260px;
+    font-family: var(--muliLight);
+    font-size: 1.3rem;
+  }
+  .secc_03_vivienda{
+    width: 100%;
+    height: 430px;
+    background-image: url(../assets/webcreditodecasa-34.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px)  {
+  #menu-mobil{
+    display: none;
+  }
+  #slider-mobil{
+    display: none;
+  }
+  .secc_main{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../assets/webcreditodecasa-01.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  /* Menú toogle */
+  .icon_logo_menu{
+    width:  100px;
+    height: 150px;
+    margin-left: 30px;
+    background-image: url(../assets/webcreditodecasa-02.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .bg_start{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/transparencias_creditodecasa-19.png);
+    background-repeat: no-repeat;
+    background-position: 40px 0px;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .menu_toggle{
+    width: 60%;
+    height: 100vh;
+  }
+  .group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .center{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav_main a li:hover{
+    background-color: var(--azul);
+  }
+  .nav_main a:hover{
+    text-decoration: none;
+  }
+  .view-menu{
+    margin-right: 0px;
+    transition: all 1s ease;
+  }
+  .hide-menu{
+    margin-right: -40%;
+    transition: all 1s ease;
+  }
+  .titulo_encuntra{
+    width: 100%;
+    height: 200px;
+  }
+  .line_titulo{
+    width: 100%;
+    height: 2px;
+    background-color: var(--gris);
+  }
+  .titulo_encuntra{
+    margin-top: 100px;
+    background-image: url(../assets/line.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .titulo_encuntra p{
+    width: 100%;
+    margin-left: 55px;
+    background-color: #fff;
+    font-size: 2rem;
+    padding-top: 10px;
+    text-align: center;
+    font-family: var(--muliLight);
+    color: var(--azul);
+  }
+  .icon_encuentra{
+    width: 110px;
+    height: 90px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #fff;
+    background-image: url(../assets/webcreditodecasa-15.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .cont-carousel{
+    width: 100%;
+    height: auto;
+
+  }
+  .cardHouse{
+    width:  100%;
+    overflow: hidden;
+    height: auto;
+    background-color: #fff;
+  }
+  .img_house_01{
+    width: 100%;
+    height: 300px;
+    background-image: url(../assets/webcreditodecasa-04.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .img_house_02{
+    width: 100%;
+    height: 300px;
+    background-image: url(../assets/webcreditodecasa-05.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .img_house_03{
+    width: 100%;
+    height: 300px;
+    background-image: url(../assets/webcreditodecasa-06.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .descHouse{
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+    font-size: .9rem;
+    display: flex;
+    color: var(--gris);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .img_hover{
+    filter: grayscale(0%);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 1s ease;
+  }
+  .img_hover:hover{
+    filter: grayscale(100%);
+    transition: all 1s ease;
+  }
+  .descHouse h3{
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+    font-family: var(--muliLight);
+  }
+  .descHouse p{
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-family: var(--muliLight);
+  }
+  .buttonMore{
+    width: 30px;
+    height: 30px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    transform: scale(.6);
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .titulo_remate{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--azul);
+    font-family: var(--muliLight);
+  }
+  .titulo_remate strong{
+    font-family: var(--muliBold);
+  }
+  .contAnimation{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  .secc_gris_01{
+    width: 100%;
+    height: auto;
+    background-color: #B0B0B0;
+  }
+  .secc_gris_02{
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: #7A7A7A;
+  }
+  .img_remate{
+    width: 100%;
+    height: 400px;
+    background-image: url(../assets/webcreditodecasa-10.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+  }
+  .text-center{
+    text-align: center;
+    font-family: var(--muliLight);
+    color: var(--azul);
+  }
+  .btn-flecha{
+    width: 80px;
+    height: 100px;
+    background-image: url(../assets/flechitas_credito-47.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation-name: flecha;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    -webkit-animation-name: flecha;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  }
+  @keyframes flecha {
+    0%{
+      background-position: 0 0;
+    }
+    50%{
+      background-position: 20px 0;
+    }
+    100%{
+      background-position: 0 0;
+    }
+  }
+  .secc_news{
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    background-color: var(--azul);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .secc_news p{
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    color: #fff;
+    font-family: var(--muliLight);
+    font-size: 1rem;
+    text-align: left;
+  }
+  .secc_news h3{
+    margin-top: 5px;
+    color: #fff;
+    text-align: left;
+    font-family: var(--muliRegular);
+    font-size: 2.2rem;
+    line-height: 35px;
+  }
+  .secc_form{
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    background-color: var(--gris);
+  }
+  .secc_form h3{
+    color: #fff;
+    text-align: left;
+    margin-bottom: 15px;
+    font-family: var(--muliRegular);
+  }
+  .group-input{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+  .img_news{
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    background-image: url(../assets/webcreditodecasa-12.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
+  .group-row{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .input-text{
+    border: none;
+    padding: 10px;
+    font-family: var(--muliLight);
+    width: 100% !important;
+  }
+  .btn_news{
+    width: 40px;
+    height: 45px;
+    background-image: url(../assets/icon_arrow.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    background-color: #1B3C85;
+    border: none;
+    transition: all 1s ease;
+  }
+  .btn_news:hover{
+    background-color: var(--gris);
+    transition: all 1s ease;
+  }
+  .dat-contacto{
+    margin-top: 100px;
+    color: var(--azul);
+    text-align: center;
+    font-family: var(--muliRegular);
+    font-size: .9rem;
+  }
+  .dat-contacto strong{
+    font-size: .7rem;
+  }
+  .textArea{
+    padding-left: 10px;
+    width: 100%;
+    height: auto;
+    resize: none;
+    font-family: var(--muliLight);
+  }
+  .btn_send{
+    width: 100%;
+    height: 30px;
+    background-color: var(--azul);
+    border: none;
+    color: #fff;
+    font-family: var(--muliRegular);
+  }
+  .back_house_01{
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  .back_house_01:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 25% auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-repeat:repeat;
+    background-image: url(../assets/webcreditodecasa-03.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    animation: background-translate linear, background-scale ease;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes background-translate {
+      0% {background-position: 0% 100%;}
+      100% {background-position: -100% 100%;}
+  }
+  .back_house_02{
+    height: 300px;
+    margin-top: 50px;
+    position: relative;
+    background-image: url(../assets/webcreditodecasa-11.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: 0 0;
+    animation: animHouse02 20s linear infinite;
+  }
+  @keyframes animHouse02 {
+    from {
+        background-position: 0 0;
+      }
+    to {
+        background-position: 100% 0;
+      }
+  }
+  .img_city_03{
+    height: 300px;
+    margin-top: 150px;
+    position: relative;
+    background-image: url(../assets/webcreditodecasa-30.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: 0 0;
+    animation: animHouse03 20s linear infinite;
+  }
+  @keyframes animHouse03 {
+    from {
+        background-position: 0 0;
+      }
+    to {
+        background-position: 100% 0;
+      }
+  }
+  .img_city_04{
+    height: 300px;
+    margin-top: 100px;
+    background-image: url(../assets/webcreditodecasa-31.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: 0 0;
+    animation: animHouse04 20s linear infinite;
+  }
+  @keyframes animHouse04 {
+    from {
+        background-position: 0 0;
+      }
+    to {
+        background-position: -100% 0;
+      }
+  }
+  .center-llave{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Nosotros */
+  .cont-main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .img_main{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/webcreditodecasa-16.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .secc_main_01{
+    width: 60%;
+    height: 100vh;
+      padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .secc_main_02{
+    height: 100vh;
+    display: flex;
+    padding-left: 70px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .img_house{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/webcreditodecasa-32.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .parrafo_main{
+    width: 600px;
+    font-family: var(--muliLight);
+    font-size: 1.2rem;
+    height: auto;
+    color: #fff;
+  }
+ .secc_02{
+   margin-top: 80px;
+   text-align: center;
+  }
+  .img_serv_01{
+    width:  110px;
+    height: 110px;
+    background-image: url(../assets/webcreditodecasa-41.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .img_serv_02{
+    width:  110px;
+    height: 110px;
+    background-image: url(../assets/webcreditodecasa-25.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .img_serv_03{
+    width:  110px;
+    height: 110px;
+    background-image: url(../assets/webcreditodecasa-26.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .img_serv_04{
+    width:  110px;
+    height: 110px;
+    background-image: url(../assets/webcreditodecasa-27.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .flip-container {
+    margin-top: 40px;
+  	perspective: 1000px;
+  }
+  	/* flip the pane when hovered */
+  	.flip-container:hover .flipper, .flip-container.hover .flipper {
+  		-webkit-transform: rotateY(180deg);
+  	}
+
+  .flip-container, .front, .back {
+  	width:  260px;
+  	height: 200px;
+  }
+  /* flip speed goes here */
+  .flipper {
+  	-webkit-transition: 0.6s;
+  	-webkit-transform-style: preserve-3d;
+
+  	position: relative;
+  }
+  /* hide back of pane during swap */
+  .front, .back {
+  	backface-visibility: hidden;
+
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  }
+  /* front pane, placed above back */
+  .front {
+  	z-index: 2;
+  	/* for firefox 31 */
+  	-webkit-transform: rotateY(0deg);
+  }
+  /* back, initially hidden pane */
+  .back {
+  	-webkit-transform: rotateY(180deg);
+  }
+  .target_front{
+    width: 230px;
+    height: 300px;
+    display: flex;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn_more{
+    width:  100%;
+    height: 50px;
+    margin-top: 80px;
+    background-image: url(../assets/iconomas_terapia-03.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+  .target_back{
+    width: 230px;
+    height: 300px;
+    padding: 20px;
+    background-color: var(--gris);
+    text-align: center;
+    color: #fff;
+    font-family: var(--muliLight);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .target_back h3{
+    font-size: 1.4rem;
+    font-family: var(--muliLight);
+  }
+  .target_back p{
+    font-size: .9rem;
+    font-family: var(--muliLight);
+  }
+  .comp_city_03{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #0D2B8A;
+  }
+  .comp_city_04{
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px;
+    background-color: #06175E;
+  }
+  .text_mision{
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    font-family: var(--muliLight);
+  }
+  .cont-llave{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .centerCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .llave_part_01{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-image: url(../assets/img_years.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+  }
+  .llave_part_02{
+    width: 100%;
+    height: 270px;
+    margin-top: 80px;
+    margin-left: 150px;
+    background-image: url(../assets/llavecreditodecasa-02-01.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: left;
+  }
+  .group-llave{
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+  }
+  .cleanPadding{
+    padding: 0;
+  }
+  .color-2{
+    background-color: #00A0A4;
+  }
+  .text_01{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-family: var(--muliLight);
+    font-size: 1.7rem;
+  }
+    /* Inmuebles */
+  .header_inmuebles{
+    width: 100%;
+    height: auto;
+  }
+  .img_city_01{
+    background-image: url(../assets/webcreditodecasa-21.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: top;
+    transition: all 1s ease;
+  }
+  .img_city_02{
+    background-image: url(../assets/webcreditodecasa-20.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: top;
+    transition: all 1s ease;
+  }
+  .view_none{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul);
+    font-size: 2rem;
+    font-family: var(--muliRegular);
+  }
+  .secc_controles{
+    margin-bottom: 20px;
+  }
+  .dat_ubicacion{
+    font-size: 1.3em !important;
+    font-family: var(--muliLight);
+  }
+  .data_oportunidad{
+    font-size: .7rem !important;
+  }
+  .button-toggle{
+    width: 200px;
+    height: 35px;
+    outline: none;
+    background-color: #06175E;
+    color: #fff;
+  }
+  .button-toggle p{
+    padding: 0;
+    margin: 0;
+    font-family: var(--muliLight);
+  }
+  .cont-buttons{
+    width: 250px;
+    height: auto;
+    padding: 2px;
+    background-color: #0D2B8A;
+  }
+  .button-toggle:focus{
+    outline: none;
+  }
+  .controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .container-chk{
+    display: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-chk input{
+    width: 30px;
+    height: 30px;
+  }
+  .sale{
+    width: 100%;
+    height: 270px;
+    position: absolute;
+    background-image: url(../assets/webcreditodecasa-38.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .img-house{
+    overflow: hidden;
+  }
+  .border-box{
+    width:  28px;
+    height: 27px;
+    border-radius: 100%;
+    margin-right: 10px;
+    border: solid var(--azul) 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-radio{
+    width:  18px;
+    height: 18px;
+    border-radius: 100px;
+    background-color: transparent;
+    -webkit-appearance: none;
+    border-radius: none;
+    padding: 0;
+    margin: 0;
+  }
+  .btn-radio:focus{
+    -webkit-outline: none;
+  }
+  .control-checkbox{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .control-checkbox p{
+    margin: 0;
+    padding: 0;
+    font-size: .9rem;
+  }
+  .btn_control{
+    width: 235px;
+    height: 40px;
+    background-color: #06175E !important;
+    background-image: url(../assets/arrow_button.png);
+    background-repeat: no-repeat;
+    background-position: 210px 15px;;
+    background-size: 6%;
+    color: #fff;
+    font-size: .9rem;
+    -webkit--appearance: none;
+    text-align: left;
+    padding-left: 10px;
+    font-family: var(--muliLight);
+  }
+  .btn_control:focus{
+    outline: none;
+    -webkit--appearance: none;
+  }
+  .cont-dropdown{
+    border-radius: 8px;
+    background-color: #E7E9F8;
+  }
+  .cont-dropdown button{
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+  }
+  .cont-dropdown button:focus{
+    background-color: var(--azul);
+    color: #fff;
+  }
+  .dropdown-activo{
+    background-color: var(--azul) !important;
+    color: #fff;
+    font-family: var(--muliLight);
+  }
+  .secc_catalogo{
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+  }
+  .color-city-01{
+    background-color: #EFEFEF;
+    transition: all 1s ease;
+  }
+  .color-city-02{
+    background-color: #DCE1EC;
+    transition: all 1s ease;
+  }
+  .img_buscar{
+    width:  100%;
+    height: 200px;
+    margin-top: 150px;
+    margin-bottom: 10px;
+    background-image: url(../assets/webcreditodecasa-22.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .titulo_inmue{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #0d2b6e;
+    font-size: 3rem;
+    font-family: var(--muliRegular);
+  }
+  /* Item inmueble */
+  .titulo_inmueble{
+    margin-top: 100px;
+  }
+  .inmueble_01{
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/webcreditodecasa-06.png);
+    background-size: 100%;
+    background-position: center;
+  }
+  .item_house{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .img{
+    width: 50%;
+    height: 270px;
+    position: relative;
+  }
+  .desc_inmueble{
+    width: 50%;
+    height: 270px;
+    padding-top: 30px;
+    padding-left: 30px;
+    color: #fff;
+    font-family: var(--muliRegular);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .desc_inmueble h3{
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem !important;
+  }
+  .desc_inmueble p{
+    margin: 0;
+    font-size:  .7rem !important;
+  }
+  .dat_precio{
+    display: flex;
+    flex-direction: row;
+  }
+  .casa_oportunidad{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem !important;
+  }
+  .dat_inmueble{
+    display: flex;
+    color: #fff;
+    font-size: .7rem !important;
+    flex-direction: row;
+  }
+  .dat_inmueble p {
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+  }
+  .dat_costo{
+    padding: 0;
+    margin: 0;
+  }
+  .text_credito{
+    padding: 0;
+    margin: 0;
+    font-size: .6rem !important;
+  }
+  .control-page{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .page-btn{
+    width:  30px;
+    height: 30px;
+    margin-left:  5px !important;
+    margin-right: 5px !important;
+    padding: 0;
+    margin: 0;
+    font-size: .9rem;
+    font-family: var(--muliLight);
+    background-color: #62667A;
+    color: #fff;
+  }
+  .group_buttons{
+    width: 110px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .jplist-holder{
+    display: flex;
+    flex-direction: row;
+  }
+  .arrow{
+    border: none;
+    background-color: transparent;
+    color: #000;
+  }
+  .jplist-selected{
+    background-color: #0D2B8A !important;
+    border: none;
+    color: #fff;
+  }
+  .icon_credit_01{
+    width:  20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #9C7E7E;
+  }
+  .icon_credit_02{
+    width:  20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #B0BD53;
+  }
+  .icon_credit_03{
+    width:  20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #E4EA2B;
+  }
+  .icon_credit_04{
+    width:  20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #E57575;
+  }
+  .itemInmueble{
+    margin-top: 60px;
+  }
+  .cont_info{
+    width: 100%;
+    height: 40px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .icon_vivienda{
+    width:  35px;
+    height: 35px;
+    margin-right: 30px;
+    background-image: url(../assets/webcreditodecasa-36.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .cont_info button{
+    height: 30px;
+    outline: none;
+    font-size: .8rem !important;
+    text-align: center;
+    font-weight: lighter;
+    border: none;
+  }
+  .btn_info{
+    background-color: #fff !important;
+    color: var(--azul) !important;
+  }
+  .form_datos{
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .form_datos input{
+    border-radius: 0px;
+    font-family: var(--muliLight);
+  }
+  .form_datos textarea{
+    border-radius: 0px;
+    font-family: var(--muliLight);
+    resize: none;
+  }
+  .modal_header{
+    border: none;
+    background-color: #1A397F;
+    font-family: var(--muliLight);
+  }
+  .modal_footer{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal_datos{
+    background-color: var(--azul);
+    color: #fff;
+  }
+  .modal-body{
+    padding: 0;
+  }
+  .close{
+    color: #fff;
+    opacity: 1;
+  }
+  .close:hover{
+    color: #fff;
+  }
+  .btn{
+    border-radius: 0;
+    font-family: var(--muliLight);
+    background-color: var(--gris);
+    color: #fff;
+  }
+  .menu_activo{
+    filter: opacity(40%);
+  }
+  .text_alert{
+    margin: 0;
+    padding: 0;
+    color: #E83F3F;
+    font-size: .8rem;
+  }
+  .group_button{
+    height: 30px;
+  }
+  .center-modal{
+    text-align: center;
+    font-family: var(--muliLight);
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon_cheked{
+    width: 100%;
+    height: 200px;
+    padding-top: 10px;
+    background-image: url(../assets/icon_cheked.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  /* Unete */
+  .img_unete{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/webcreditodecasa-18.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .cont-video{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .text_unete{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: var(--muliLight);
+    font-size: 2.2rem;
+    color: #0D2B8A;
+  }
+  .v-activo{
+    display: inline !important;
+    filter: opacity(100%);
+  }
+  .desc-video{
+    width:  100%;
+    height: 160px;
+    background-color: #4e4e4e;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    font-size: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .thumb-item{
+    width: 270px !important;
+    margin-right: 20px;
+  }
+  .video{
+    display: none;
+  }
+  .text_unete strong{
+    font-family: var(--muliRegular);
+  }
+  .img_cont_unete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--muliLight);
+  }
+  .img_cont_unete p{
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--azul);
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    line-height: 22px;
+  }
+  .icon_unete_01{
+    width: 100%;
+    height: 140px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-image: url(../assets/webcreditodecasa-41.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .icon_unete_02{
+    width: 100%;
+    height: 140px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-image: url(../assets/webcreditodecasa-42.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .icon_unete_03{
+    width: 100%;
+    height: 140px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-image: url(../assets/webcreditodecasa-43.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .secc_compromiso{
+    padding-bottom: 100px;
+  }
+  /* Vivienda */
+  .img_vivienda{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/webcreditodecasa-17.png);
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo_vivineda{
+    width: 100%;
+    height: 300px;
+    background-image: url(../assets/webcreditodecasa-36.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+  }
+  .img_vivienda h3{
+    margin-top: 100px;
+    color: #fff;
+    text-align: center;
+    font-family: var(--muliLight);
+    font-size:  2.5rem;
+  }
+  .img_vivienda strong{
+    font-family: var(--muliBold);
+  }
+  .secc_03_vivienda h3{
+    margin-top: 50px;
+    font-family: var(--muliLight);
+    color: var(--azul);
+    font-size: 3rem;
+  }
+  .box{
+    width: 100%;
+    height: 150px;
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .box p{
+    font-family: var(--muliLight);
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+  }
+  .box h3{
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: var(--muliBold);
+  }
+  .color-azul{
+    background-color: var(--azul);
+  }
+  .color-gris{
+    background-color: var(--gris) !important;
+  }
+  .secc_04_vivienda h3{
+    font-family: var(--muliLight);
+    color: var(--azul);
+    font-size: 3rem;
+  }
+  .text_candidato{
+    margin-top: 20px;
+    text-align: left;
+    font-family: var(--muliLight);
+    font-size: 1.2rem;
+  }
+  .btn-faq{
+    height: 40px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-faq p{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: var(--muliLight);
+  }
+  .img_casa{
+    width: 100%;
+    height: 160px;
+    margin-top: 100px;
+    background-image: url(../assets/webcreditodecasa-35.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .btn-contacta{
+    height: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-contacta p{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: var(--muliLight);
+  }
+  .secc_05_vivienda{
+    padding-bottom: 50px;
+  }
+  /* FAQ */
+  .titulo_header_faq{
+    padding: 0;
+    margin: 0;
+    line-height: 55px;
+    margin-top: 280px;
+    color: #0D2B8A;
+    font-family: var(--muliLight);
+    font-size: 4rem !important;
+  }
+  .sub-text{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 0;
+    font-size: 1rem;
+    color: var(--gris);
+    font-family: var(--muliLight);
+  }
+  .card{
+    background-color: transparent !important;
+    border:  none !important;
+    border-radius: 0px !important;
+    margin-bottom: 20px;
+  }
+  .acordion-faq{
+  }
+  .card-header{
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #0D2B8A;
+    color: #fff;
+    font-family: var(--muliLight);
+  }
+  .card-header h5{
+    padding: 0;
+    margin: 0;
+  }
+  .card-header h5:hover{
+    cursor: default;
+  }
+  .color-azul-medio{
+    background-color: #DCE1EC;
+  }
+  .color-azul-medio{
+    border: none;
+  }
+  .sub-pregunta{
+    color: var(--girs);
+    font-family: var(--muliLight);
+  }
+  .sub-pregunta:hover{
+    text-decoration: none;
+    color: var(--girs);
+  }
+  .btnSub{
+    font-family: var(--muliLight);
+    padding: 10px;
+  }
+  .btnSub:hover{
+    cursor: default;
+  }
+  .texto-blanco{
+    color: #fff;
+  }
+  .secc-contacto{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #0D2B8A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .titulo-contacto{
+    color: #fff;
+    font-family: var(--muliRegular);
+    text-align: right;
+  }
+  .btnContacto{
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: #fff;
+    background-color: #06175E;
+    font-family: var(--muliLight);
+  }
+  .btnContacto:hover{
+    background-color: var(--gris);
+  }
+}
