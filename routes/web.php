@@ -67,6 +67,13 @@ Route::post('/credit-type/save', 'CreditTypeController@save')->name('save');
 Route::get('/credit-type/delete/{id}', 'CreditTypeController@delete')->name('delete');
 Route::post('/credit-type/search', 'CreditTypeController@search')->name('search');
 
+Route::get('/states', 'StateController@index')->name('index');
+Route::get('/state', 'StateController@create')->name('create');
+Route::get('/state/{id}', 'StateController@update')->name('update');
+Route::post('/state/save', 'StateController@save')->name('save');
+Route::get('/state/delete/{id}', 'StateController@delete')->name('delete');
+Route::post('/state/search', 'StateController@search')->name('search');
+
 //users
 Route::get('/users', 'UserController@index')->name('index');
 Route::get('/user', 'UserController@create')->name('create');

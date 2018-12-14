@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\URL;
 use App\House;
+use App\State;
 use App\HouseImage;
 
 class HouseController extends Controller
@@ -28,8 +29,10 @@ class HouseController extends Controller
     public function index()
     {
         $houses = House::all();
+        $states = state::all();
         return view('house.index')
-        ->with('houses',$houses);
+        ->with('houses',$houses)
+        ->with('states',$states);
     }
 
      /**

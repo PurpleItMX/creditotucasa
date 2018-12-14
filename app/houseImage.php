@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class houseImage extends Model
+class HouseImage extends Model
 {
 	/**
     *The name de primarykey if is diferente of the id

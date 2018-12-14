@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class House extends Model
+class state extends Model
 {
- 	/**
+    /**
     *The name de primarykey if is diferente of the id
     *
     *
     */
-    protected $primaryKey = 'id_house';
+    protected $primaryKey = 'id_state';
 
     /**
      * The attributes that are mass assignable.
@@ -19,7 +19,7 @@ class House extends Model
      * @var array
      */
     protected $fillable = [
-        'clave', 'colony', 'municipality', 'price', 'description', 'specification', 'estatus', 'n_bathroom', 'n_room', 'credito_casa'
+        'name',
     ];
 
     /**
