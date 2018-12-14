@@ -27,15 +27,9 @@ class HouseController extends Controller
      */
     public function index()
     {
-        try{
-            $houses = House::all();
-            return view('house.index')
-            ->with('houses',$houses);
-         }catch (QueryException $e){
-            $message = $e->errorInfo[1] ."-".$e->errorInfo[2];
-            return view('house.index')
-            ->withErrors([$message]);
-       }
+        $houses = House::all();
+        return view('house.index')
+        ->with('houses',$houses);
     }
 
      /**
@@ -57,11 +51,8 @@ class HouseController extends Controller
             $house = House::findOrFail($id);
             return $house;
         }catch (QueryException $e){
-        	$houses = House::all();
-            $message = $e->errorInfo[1] ."-".$e->errorInfo[2];
-            return view('house.index')
-            ->with('houses',$houses)
-            ->withErrors([$message]);
+        	$message = $e->errorInfo[1] ."-".$e->errorInfo[2];
+            return redirect('/houses')->with('error', $message);
        }
     }
 
@@ -99,19 +90,13 @@ class HouseController extends Controller
                 $houseImage->save();
             }*/
             if($request['id_house_redirect'] == 'true'){
-                $houses = House::all();
-                return view('house.index')
-                ->with('houses',$houses)
-                ->withSuccess($message);
+                return redirect('/houses')->with('success', $message);
             }else{
                 return House::all()->where('estatus',1);
             }
         }catch (QueryException $e){
-            $houses = House::all();
             $message = $e->errorInfo[1] ."-".$e->errorInfo[2];
-            return view('house.index')
-            ->with('houses',$houses)
-            ->withErrors([$message]);
+            return redirect('/houses')->with('error', $message);
        }
     }
 
@@ -128,7 +113,7 @@ class HouseController extends Controller
             return redirect("/houses")->with("success","Registro borrado");
         }catch (QueryException $e){
             $message = $e->errorInfo[1] ."-".$e->errorInfo[2];
-            return redirect("/houses")->with("success",$message);
+            return redirect('/houses')->with('error', $message);
        }
     }
 
