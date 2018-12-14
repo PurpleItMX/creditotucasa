@@ -13,39 +13,119 @@
     <!-------------------------- Styles ---------------------------------------------------->
     <link href="{{ URL::asset('css/font-awesome.min.css') }}" rel="stylesheet"  type="text/css">
     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    
     <link rel="stylesheet" href="{{ URL::asset('jsfileupload/css/jquery.fileupload.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('jsfileupload/css/jquery.fileupload-ui.css') }}">
     <noscript><link rel="stylesheet" href="{{ URL::asset('jsfileupload/css/jquery.fileupload-noscript.css') }}"></noscript>
     <noscript><link rel="stylesheet" href="{{ URL::asset('jsfileupload/css/jquery.fileupload-ui-noscript.css') }}"></noscript>
 
-    <link href="{{ URL::asset('css/datatables.css') }}" rel="stylesheet">
-    <!--<link href="{{ URL::asset('css/estilos.css') }}" rel="stylesheet" type="text/css">-->
-    <link href="{{ URL::asset('css/tableStyle.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ URL::asset('css/tableStyle.css') }}" rel="stylesheet" type="text/css">
+    <!--<link href="{{ URL::asset('css/datatables.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/tableStyle.css') }}" rel="stylesheet" type="text/css">-->
     <!-- style dasboard-->
     <link rel="stylesheet" href="{{ URL::asset('css/estilos-admin.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/adminlte.css') }}">
     <!-- style app-->
     <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/boxStyle.css') }}">
-
-
+    <link rel="stylesheet" href="{{ URL::asset('jsfileupload/css/style.css') }}">
+    
+    <script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+            <p class="name">{%=file.name%}</p>
+            <strong class="error text-danger"></strong>
+        </td>
+        <td>
+            <p class="size">Processing...</p>
+            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-primary start" disabled>
+                    <i class="glyphicon glyphicon-upload"></i>
+                    <span>Start</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-warning cancel">
+                    <i class="glyphicon glyphicon-ban-circle"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        <td>
+            <span class="preview">
+                {% if (file.thumbnailUrl) { %}
+                    <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
+                {% } %}
+            </span>
+        </td>
+        <td>
+            <p class="name">
+                {% if (file.url) { %}
+                    <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+                {% } else { %}
+                    <span>{%=file.name%}</span>
+                {% } %}
+            </p>
+            {% if (file.error) { %}
+                <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+            {% } %}
+        </td>
+        <td>
+            <span class="size">{%=o.formatFileSize(file.size)%}</span>
+        </td>
+        <td>
+            {% if (file.deleteUrl) { %}
+                <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                    <i class="glyphicon glyphicon-trash"></i>
+                    <span>Eliminar</span>
+                </button>
+            {% } else { %}
+                <button class="btn btn-warning cancel">
+                    <i class="glyphicon glyphicon-ban-circle"></i>
+                    <span>Cancel</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
     <script src="{{ URL::asset('js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ URL::asset('js/jquery.validate.min.js') }}"></script>
     <script src="{{ URL::asset('js/additional-methods.min.js') }}"></script>
     <script src="{{ URL::asset('js/popper.min.js') }}"></script>
 
-
     <script src="{{ URL::asset('jsfileupload/js/vendor/jquery.ui.widget.js') }}"></script>
     <script src="{{ URL::asset('jsfileupload/tmpl.min.js') }}"></script>
-
     <script src="{{ URL::asset('jsfileupload/load-image.all.min.js') }}"></script>
-    <script src="{{ URL::asset('jsfileupload/canvas-to-blob.min.js') }}"></script>
-
+    
     <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('jsfileupload/canvas-to-blob.min.js') }}"></script>
+    <script src="{{ URL::asset('jsfileupload/js/jquery.iframe-transport.js') }}"></script>
+    <script src="{{ URL::asset('jsfileupload/js/jquery.fileupload.js') }}"></script>
+    <script src="{{ URL::asset('jsfileupload/js/jquery.fileupload-process.js') }}"></script>
+    <script src="{{ URL::asset('jsfileupload/js/jquery.fileupload-image.js') }}"></script>
+    <script src="{{ URL::asset('jsfileupload/js/jquery.fileupload-audio.js') }}"></script>
+    <script src="{{ URL::asset('jsfileupload/js/jquery.fileupload-video.js') }}"></script>
+    <script src="{{ URL::asset('jsfileupload/js/jquery.fileupload-validate.js') }}"></script>
+    <script src="{{ URL::asset('jsfileupload/js/jquery.fileupload-ui.js') }}"></script>
+    <script src="{{ URL::asset('jsfileupload/js/main.js') }}"></script>
     <script src="{{ URL::asset('js/jquery.mask.min.js') }}"></script>
     <script src="{{ URL::asset('js/datatables.min.js') }}"></script>
+
     <!-- style de menu -->
     <script src="{{ URL::asset('js/adminlte.js') }}"></script>
     <!--  propios del proyecto-->
@@ -75,7 +155,6 @@
                     </button>-->
                 </div>
             @endif
-
             <div id="messageAlert"><p></p></div>
             @yield('content')
         </main>
