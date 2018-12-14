@@ -31,8 +31,7 @@ class CreditTypeController extends Controller
             ->with('creditTypes',$creditTypes);
          }catch (QueryException $e){
             $message = $e->errorInfo[1] ."-".$e->errorInfo[2];
-            return view('credit-type.index')
-            ->withErrors([$message]);
+            return redirect('/credit-types')->with('error', $message);
        }
     }
 
@@ -56,8 +55,7 @@ class CreditTypeController extends Controller
             return $creditType;
         }catch (QueryException $e){
             $message = $e->errorInfo[1] ."-".$e->errorInfo[2];
-            return view('credit-type.index')
-            ->withErrors([$message]);
+            return redirect('/credit-types')->with('error', $message);
        }
     }
 
@@ -86,19 +84,13 @@ class CreditTypeController extends Controller
             }
             $creditType->save();
             if($request['id_credit_type_redirect'] == 'true'){
-                $creditTypes = CreditType::all();
-                return view('credit-type.index')
-                ->with('creditTypes',$creditTypes)
-                ->withSuccess($message);
+                return redirect('/credit-types')->with('success', $message);
             }else{
                 return CreditType::all()->where('estatus',1);
             }
         }catch (QueryException $e){
-            $creditTypes = CreditType::all();
             $message = $e->errorInfo[1] ."-".$e->errorInfo[2];
-            return view('credit-type.index')
-            ->with('creditTypes',$creditTypes)
-            ->withErrors([$message]);
+            return redirect('/credit-types')->with('error', $message);
        }
     }
 
@@ -112,16 +104,10 @@ class CreditTypeController extends Controller
         try{
             $creditType = CreditType::findOrFail($id);
     	    $creditType->delete();
-            $creditTypes = CreditType::all();
-            return view('credit-type.index')
-            ->with('creditTypes',$creditTypes)
-            ->withSuccess('Registro Borrado');
+            return redirect('/credit-types')->with('success', 'Registro Borrado');
         }catch (QueryException $e){
-            $creditTypes = CreditType::all();
             $message = $e->errorInfo[1] ."-".$e->errorInfo[2];
-            return view('credit-type.index')
-            ->with('creditTypes',$creditTypes)
-            ->withErrors([$message]);
+            return redirect('/credit-types')->with('error', $message);
        }
     }
 
