@@ -19,7 +19,7 @@ class House extends Model
      * @var array
      */
     protected $fillable = [
-        'clave', 'colony', 'municipality', 'price', 'description', 'specification', 'estatus', 'n_bathroom', 'n_room', 'credito_casa'
+        'clave', 'colony', 'municipality', 'price', 'description', 'specification', 'estatus', 'n_bathroom', 'n_room', 'credit_house'
     ];
 
     /**

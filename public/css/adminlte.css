@@ -271,6 +271,15 @@ body {
   /*-moz-box-shadow: -1px 0px 9px 0px rgba(0,0,0,0.11);*/
   /*box-shadow: -1px 0px 9px 0px rgba(0,0,0,0.11);*/
 }
+.btn-close-img{
+  border: none;
+  background-color: #4e4e4e;
+  color: #fff;
+}
+.btn-close-img p{
+  padding: 0;
+  margin: 0;
+}
 hr {
   box-sizing: content-box;
   height: 0;

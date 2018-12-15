@@ -50,13 +50,9 @@ class CreditTypeController extends Controller
      */
     public function update($id)
     {
-        try{
+
             $creditType = CreditType::findOrFail($id);
             return $creditType;
-        }catch (QueryException $e){
-            $message = $e->errorInfo[1] ."-".$e->errorInfo[2];
-            return redirect('/credit-types')->with('error', $message);
-       }
     }
 
     /**
@@ -71,17 +67,22 @@ class CreditTypeController extends Controller
             $id = $request['id_credit_type'];
             if($id == NULL){
                 $creditType = new CreditType();
-    	        $creditType->name = $request['name'];
-    	        $creditType->url_img = "sdadd"; //$request['url_img'];
-    	        $creditType->estatus = ($request['estatus'] == "on")?1:0;
                 $message = "Registro Creado";
             }else{
                 $creditType  = CreditType::findOrFail($id);
-                $creditType->name = $request['name'];
-    	        $creditType->url_img = "sdadd"; //$request['url_img'];
-    	        $creditType->estatus = ($request['estatus'] == "on")?1:0;
                 $message = "Registro Actualizado";
             }
+
+            $creditType->name = $request['name'];
+            if($request['url_hidden'] == NULL){
+              $url_fisica = public_path()."/img/".$_FILES["url_img"]["name"];
+              $url_actual = "img/".$_FILES["url_img"]["name"];
+              move_uploaded_file($_FILES["url_img"]["tmp_name"], $url_fisica);
+              $creditType->url_img =$url_actual;
+            }else {
+                $creditType->url_img = $request['url_hidden'];
+            }
+            $creditType->estatus = ($request['estatus'] == "on")?1:0;
             $creditType->save();
             if($request['id_credit_type_redirect'] == 'true'){
                 return redirect('/credit-types')->with('success', $message);

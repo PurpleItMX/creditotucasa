@@ -80,7 +80,9 @@ class HouseController extends Controller
               $house->colony = $request['colony'];
               $house->municipality = $request['municipality'];
               $house->price = $request['price'];
-              $house->credito_casa = $request['credito_casa'];
+              $house->description = $request['description'];
+              $house->specification = $request['specification'];
+              $house->credit_house = $request['credit_house'];
               $house->n_room = $request['n_room'];
               $house->n_bathroom = $request['n_bathroom'];
               $house->estatus = ($request['estatus'] == "on")?1:0;

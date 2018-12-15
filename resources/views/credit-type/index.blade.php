@@ -2,6 +2,7 @@
 
 @section('content')
 <script src="{{ URL::asset('js/credit-type/form.js') }}"></script>
+
 	<div class="container">
     <div class="box">
       <div class="box-header">
@@ -68,7 +69,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form id="saveCreditType" method="POST" action="{{ url('/credit-type/save') }}">
+        <form id="saveCreditType" method="POST" action="{{ url('/credit-type/save') }}" enctype="multipart/form-data">
           @csrf
           <input id="id_credit_type" name="id_credit_type" type="hidden" value="">
           <input id="redirect" name="id_credit_type_redirect" type="hidden" value="true">
@@ -91,9 +92,16 @@
                 </label>
               </div>
             </div>
-						<div class="form-group col-md-12">
+						<div id="up_img" class="form-group col-md-12">
 							<label for="url_img">{{ __('Imagen:') }}</label><br>
+							<input id="url_hidden" name="url_hidden" type="hidden" class="required"/>
 							<input id="url_img" name="url_img" type="file" class="required"/>
+						</div>
+						<div id="secc_img" class="col-lg-12 col-xl-12">
+							<img id="imgCreditType" src="" width="30px" height="30px" alt="">
+							<button id="deleteButton" type="button" class="btn-close-img" name="button">
+								<p>X</p>
+							</button>
 						</div>
           </div>
         </form>
